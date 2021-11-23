@@ -5,10 +5,12 @@ class Album {
   // final String url;
   // final String thumbnailUrl;
   final double temp;
+  final int pressure;
 
   Album({
     //required this.albumId,
     required this.temp,
+    required this.pressure,
     // required this.id,
     // required this.title,
     // required this.url,
@@ -22,6 +24,7 @@ class Album {
       // title: json['title'],
       // url: json['url'],
       temp: json['main']['temp'],
+      pressure: json['main']['pressure'],
       //thumbnailUrl: json['thumbnailUrl']
     );
   }

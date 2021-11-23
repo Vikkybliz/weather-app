@@ -34,9 +34,19 @@ class _MyAppState extends State<MyApp> {
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 return Center(
-                  child: Text(
-                    snapshot.data!.temp.toString(),
-                    style: TextStyle(fontSize: 24),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Pressure: ${snapshot.data!.pressure}',
+                        style: TextStyle(fontSize: 24),
+                      ),
+                      Text(
+                        'Temperature: ${snapshot.data!.temp.toString()}',
+                        style: TextStyle(fontSize: 24),
+                      ),
+                    ],
                   ),
                 );
               } else if (snapshot.hasError) {
